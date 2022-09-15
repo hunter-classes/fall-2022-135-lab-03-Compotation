@@ -82,3 +82,32 @@ double get_max_east() {
 	fin.close();
 	return maxStorage;
 }
+
+std::string compare_basins(std::string date) {
+	std::ifstream fin("Current_Reservoir_Levels.tsv");
+	if (fin.fail()) {
+		std::cerr << "File cannot be opened for reading." << std::endl;
+    		exit(1); // exit if failed to open the file
+	}
+	
+	std::string junk;
+	std::getline(fin, junk);
+
+	std::string filedate;
+	double eastSt;
+	double eastEl;
+	double westSt;
+	double westEl;
+	while(fin >> filedate >> eastSt >> eastEl >> westSt >> westEl) {
+		if (date.compare(filedate) == 0) {
+			if (eastSt > westSt) {
+				return "East";
+			} else {
+				return "West";
+			}
+		}
+	}
+	return "Not found";
+}
+
+

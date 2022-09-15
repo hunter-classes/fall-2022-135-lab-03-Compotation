@@ -8,5 +8,10 @@ int main() {
 
 	std::cout << "minimum storage in East basin: " << get_min_east() << " billion gallons" << std::endl;
 	std::cout << "MAXimum storage in East basin: " << get_max_east() << " billion gallons" << std::endl;
+
+	std::cout << "09/13/2018 " << compare_basins("09/13/2018") << std::endl;
+	std::cout << "09/14/2018 " << compare_basins("09/13/2018") << std::endl;
+	std::cout << "01/14/2018 " << compare_basins("09/13/2018") << std::endl;
+
   	return 0;
 }
