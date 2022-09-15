@@ -1,5 +1,5 @@
 #include <iostream>
-#include "reservoir.cpp"
+#include "reservoir.h"
 
 int main() {
 	get_east_storage("01/01/2018");
