@@ -23,9 +23,16 @@ double get_east_storage(std::string date) {
 		fin.ignore(INT_MAX, '\n');
 		if (date.compare(filedate) == 0) {
 			std::cout << "East basin storage: " << eastSt << " billion gallons" << std::endl;
+			fin.close();
+			return eastSt;
 		}
 	}
 
-	fin.close();
 	return 0.0;
+}
+
+double get_min_east() {
+}
+
+double get_max_east() {
 }
