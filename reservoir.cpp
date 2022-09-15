@@ -2,7 +2,6 @@
 #include <iostream>
 #include <fstream>
 #include <climits>
-#include <cstring>
 #include <cfloat>
 
 double get_east_storage(std::string date) {
