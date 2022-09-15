@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <climits>
+#include <cstring>
 
 double get_east_storage(std::string date) {
 	std::ifstream fin("Current_Reservoir_Levels.tsv");
@@ -20,7 +21,9 @@ double get_east_storage(std::string date) {
 	double westEl;
 	while(fin >> filedate >> eastSt >> eastEl >> westSt >> westEl) {
 		fin.ignore(INT_MAX, '\n');
-		std::cout << filedate << " " << eastSt << std::endl;
+		if (date.compare(filedate) == 0) {
+			std::cout << "East basin storage: " << eastSt << " billion gallons" << std::endl;
+		}
 	}
 
 	fin.close();
