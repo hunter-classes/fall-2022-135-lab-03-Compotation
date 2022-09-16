@@ -17,8 +17,7 @@ int main() {
 	reverse_order("01/01/2018", "03/01/2018");
     std::cout << std::endl << std::endl;
     reverse_order("05/01/2018", "08/25/2018");
-    std::cout << std::endl << std::endl << "done" << std::endl;
-    // line below isn't working properly starts at 12/30/2018 and ends 1/02/2018
+    std::cout << std::endl << std::endl;
     reverse_order("01/02/2018", "01/05/2018");
     std::cout << std::endl << std::endl;
 
