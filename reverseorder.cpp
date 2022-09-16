@@ -21,14 +21,15 @@ void reverse_order(std::string date1, std::string date2) {
         double eastEl;
         double westSt;
         double westEl;
-        bool date2found;
-        for (std::string line : reverselines) {
-            std::stringstream linestream(line);
+        bool date2found = 0;
+
+		for (const std::string& fline : reverselines) {
+            std::stringstream linestream(fline);
             linestream >> filedate >> eastSt >> eastEl >> westSt >> westEl;
-            if (date2.compare(filedate) == 0) {
+            if (date2 == filedate) {
                 std::cout << filedate << " " << westEl << " ft" << std::endl;
                 date2found = true;
-            } else if (date1.compare(filedate) == 0) {
+            } else if (date1 == filedate) {
                 std::cout << filedate << " " << westEl << " ft" << std::endl;
                 return;
             }  else if (date2found) {
