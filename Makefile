@@ -1,4 +1,5 @@
 CXXFLAGS = -Wall
+all: main
 main: main.o reservoir.o reverseorder.o
 	g++ $(CXXFLAGS) -o main main.o reservoir.o reverseorder.o
 
@@ -11,4 +12,3 @@ reverseorder.o: reverseorder.cpp reverseorder.h
 	g++ $(CXXFLAGS) -c reverseorder.cpp
 clean:
 	rm -f main.o reservoir.o
-
