@@ -12,7 +12,7 @@ int main() {
 
 	std::cout << "09/13/2018 " << compare_basins("09/13/2018") << std::endl;
 	std::cout << "09/14/2018 " << compare_basins("09/13/2018") << std::endl;
-	std::cout << "01/14/2018 " << compare_basins("09/13/2018") << std::endl;
+	std::cout << "01/14/2018 " << compare_basins("09/13/2018") << std::endl << std::endl;
 
 	reverse_order("01/01/2018", "03/01/2018");
     std::cout << std::endl << std::endl;
