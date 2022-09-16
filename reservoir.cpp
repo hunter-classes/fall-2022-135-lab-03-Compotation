@@ -101,8 +101,10 @@ std::string compare_basins(std::string date) {
 		if (date.compare(filedate) == 0) {
 			if (eastSt > westSt) {
 				return "East";
-			} else {
+			} else if (westSt > eastSt) {
 				return "West";
+			} else {
+				return "Equal";
 			}
 		}
 	}
